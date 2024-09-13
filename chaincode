@@ -1,0 +1,13 @@
+import { Context, Contract } from 'fabric-contract-api';
+
+export class PrecursorChaincode extends Contract {
+  async recordTransaction(ctx: Context, transactionId: string, sender: string, receiver: string, amount: number): Promise<void> {
+    const transaction = {
+      sender, 
+      receiver, 
+      amount, 
+      timestamp: new Date().toISOString()
+    };
+    await ctx.stub.putState(transactionId, Buffer.from(JSON.stringify(transaction)));
+  }
+}
