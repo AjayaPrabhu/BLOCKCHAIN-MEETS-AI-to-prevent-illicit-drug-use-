@@ -1,0 +1,49 @@
+# Blockchain Project to Prevent Illicit Use of Precursor Chemicals
+
+## Description
+This project leverages blockchain technology to track the use of precursor chemicals and prevent their illicit usage. The system monitors sender and receiver bank transactions, tracks consignment routes via GPS, and uses electronic seals to ensure tamper-proof delivery.
+
+## Features
+- Blockchain-based transaction recording.
+- GPS-based consignment tracking.
+- Electronic lock and seal system using Raspberry Pi.
+- QR code-based product identification.
+
+## Technologies Used
+- **Blockchain**: Hyperledger Fabric.
+- **Hardware**: Raspberry Pi for electronic seal and GPS tracking.
+- **Backend**: Node.js/Typescript for chaincode and off-chain data management.
+- **Frontend**: (if applicable) React or any other framework.
+
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/blockchain-precursor-project.git
+   ```
+
+2. Set up the Hyperledger Fabric network:
+   ```bash
+   cd fabric-samples/test-network
+   ./network.sh up createChannel -ca
+   ```
+
+3. Install chaincode:
+   ```bash
+   ./network.sh deployCC -ccn chaincode_name -ccp ../path-to-chaincode -ccl typescript
+   ```
+
+## Usage
+1. Start the network and run the app:
+   ```bash
+   cd application-typescript
+   npm install
+   npm start
+   ```
+
+2. Use the Raspberry Pi for GPS tracking and electronic lock operations.
+
+## Contributors
+- AJAYA- Project Lead.
+- ANGEL.BM
+KAREN.A
+
